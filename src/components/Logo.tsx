@@ -1,6 +1,6 @@
 export function Logo() {
   return (
-    <strong className="flex gap-2 text-xl font-semibold text-zinc-900 items-center">
+    <strong className="flex items-center gap-2 text-xl font-semibold text-zinc-900">
       <svg
         width={38}
         height={38}
@@ -205,5 +205,5 @@ export function Logo() {
       </svg>
       <span>Fati UI</span>
     </strong>
-  );
+  )
 }
