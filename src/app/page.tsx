@@ -132,9 +132,10 @@ export default function Home() {
             </p>
           </div>
 
-          <InputFile.Root className="flex items-start gap-5">
+          <InputFile.Root>
             <InputFile.Trigger />
-            <InputFile.Control />
+            <InputFile.FileList />
+            <InputFile.Control multiple />
           </InputFile.Root>
 
           <div />
