@@ -4,7 +4,7 @@ import * as SelectPrimitive from '@radix-ui/react-select'
 import { ChevronDown } from 'lucide-react'
 import { ReactNode } from 'react'
 
-export interface SelectProps {
+export interface SelectProps extends SelectPrimitive.SelectProps {
   children: ReactNode
   placeholder: string
 }

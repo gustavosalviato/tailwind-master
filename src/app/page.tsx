@@ -1,9 +1,18 @@
 import { SettingsTabs } from '@/components/SettingsTabs'
 import * as Input from '@/components/Input'
-import { Mail } from 'lucide-react'
+import {
+  Bold,
+  Italic,
+  Link,
+  List,
+  ListOrdered,
+  LogOut,
+  Mail,
+} from 'lucide-react'
 import * as InputFile from '@/components/Form/FileInput'
 import { Select } from '@/components/Form/Select'
 import { SelectItem } from '@/components/Form/Select/SelectItem'
+import { TextArea } from '@/components/TextArea'
 
 export default function Home() {
   return (
@@ -128,6 +137,53 @@ export default function Home() {
           <div className="space-y-1">
             <span className="text-sm font-medium text-zinc-700">Bio</span>
             <p className="text-sm text-zinc-500">Write a short introduction.</p>
+          </div>
+
+          <div className="space-y-3">
+            <div className="grid grid-cols-2 gap-3">
+              <Select placeholder="" defaultValue="normal">
+                <SelectItem value="normal" text="Normal text" defaultChecked />
+                <SelectItem value="md" text="Mark Down" defaultChecked />
+              </Select>
+
+              <div className="flex items-center gap-3">
+                <button
+                  type="button"
+                  className="rounded-md p-2 hover:bg-zinc-50"
+                >
+                  <Bold className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                </button>
+                <button
+                  type="button"
+                  className="rounded-md p-2 hover:bg-zinc-50"
+                >
+                  <Italic className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                </button>
+                <button
+                  type="button"
+                  className="rounded-md p-2 hover:bg-zinc-50"
+                >
+                  <Link className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                </button>
+                <button
+                  type="button"
+                  className="rounded-md p-2 hover:bg-zinc-50"
+                >
+                  <List className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                </button>
+                <button
+                  type="button"
+                  className="rounded-md p-2 hover:bg-zinc-50"
+                >
+                  <ListOrdered
+                    className="h-4 w-4 text-zinc-500"
+                    strokeWidth={3}
+                  />
+                </button>
+              </div>
+
+              <TextArea />
+            </div>
           </div>
 
           <div />
