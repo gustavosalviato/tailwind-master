@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { LogOut } from 'lucide-react'
+import { Button } from './Button'
 
 export function Profile() {
   return (
@@ -16,9 +17,9 @@ export function Profile() {
           gustavosalviato@gmail.com
         </span>
       </div>
-      <button className="flex items-center justify-center rounded-md p-2 transition-colors duration-300 hover:bg-zinc-50">
+      <Button variant="ghost">
         <LogOut size={20} className="text-zinc-500" />
-      </button>
+      </Button>
     </div>
   )
 }

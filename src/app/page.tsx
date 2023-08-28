@@ -13,6 +13,7 @@ import * as InputFile from '@/components/Form/FileInput'
 import { Select } from '@/components/Form/Select'
 import { SelectItem } from '@/components/Form/Select/SelectItem'
 import { TextArea } from '@/components/TextArea'
+import { Button } from '@/components/Button'
 
 export default function Home() {
   return (
@@ -30,19 +31,8 @@ export default function Home() {
         </div>
 
         <div className="flex items-center gap-2">
-          <button
-            type="button"
-            className="rounded-md border border-zinc-300 px-3 py-2 text-sm font-semibold text-zinc-700 transition-colors duration-300 hover:bg-zinc-50"
-          >
-            Cancel
-          </button>
-          <button
-            form="formSubmit"
-            type="submit"
-            className="rounded-md border bg-violet-600 px-3 py-2 text-sm font-semibold text-white transition-colors duration-300 hover:bg-violet-500            "
-          >
-            Save
-          </button>
+          <Button variant="secondary">Cancel</Button>
+          <Button variant="primary">Save</Button>
         </div>
       </div>
 
@@ -147,39 +137,44 @@ export default function Home() {
               </Select>
 
               <div className="flex items-center gap-3">
-                <button
+                <Button
                   type="button"
+                  variant="ghost"
                   className="rounded-md p-2 hover:bg-zinc-50"
                 >
                   <Bold className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                </button>
-                <button
+                </Button>
+                <Button
                   type="button"
+                  variant="ghost"
                   className="rounded-md p-2 hover:bg-zinc-50"
                 >
                   <Italic className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                </button>
-                <button
+                </Button>
+                <Button
                   type="button"
+                  variant="ghost"
                   className="rounded-md p-2 hover:bg-zinc-50"
                 >
                   <Link className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                </button>
-                <button
+                </Button>
+                <Button
                   type="button"
+                  variant="ghost"
                   className="rounded-md p-2 hover:bg-zinc-50"
                 >
                   <List className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                </button>
-                <button
+                </Button>
+                <Button
                   type="button"
+                  variant="ghost"
                   className="rounded-md p-2 hover:bg-zinc-50"
                 >
                   <ListOrdered
                     className="h-4 w-4 text-zinc-500"
                     strokeWidth={3}
                   />
-                </button>
+                </Button>
               </div>
 
               <TextArea />
@@ -204,8 +199,11 @@ export default function Home() {
             <InputFile.FileList />
             <InputFile.Control multiple />
           </InputFile.Root>
+        </div>
 
-          <div />
+        <div className="flex items-center justify-end gap-2 pt-5">
+          <Button variant="secondary">Cancel</Button>
+          <Button variant="primary">Save</Button>
         </div>
       </form>
     </>
