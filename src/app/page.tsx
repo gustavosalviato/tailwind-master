@@ -28,11 +28,11 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <form
+      <form
         id="formSubmit"
         className="mt-6 flex w-full flex-col space-y-5 divide-y divide-zinc-200"
       >
-        <div className="grid grid-cols-form gap-3">
+        <div className="grid gap-3 lg:grid-cols-form">
           <label
             htmlFor="firstName"
             className="text-sm font-medium text-zinc-700"
@@ -40,7 +40,7 @@ export default function Home() {
             Name
           </label>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid gap-6 lg:grid-cols-2">
             <Input.Root>
               <Input.Control id="firstName" defaultValue="Olivia" />
             </Input.Root>
@@ -51,7 +51,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-form gap-3 pt-5">
+        <div className="grid grid-cols-1 gap-3 pt-5 lg:grid-cols-form">
           <label className="text-sm font-medium text-zinc-700">Email</label>
 
           <Input.Root>
@@ -67,7 +67,7 @@ export default function Home() {
           <div />
         </div>
 
-        <div className="grid grid-cols-form gap-3 pt-5">
+        <div className="grid gap-3 pt-5 lg:grid-cols-form">
           <div className="space-y-1">
             <span className="text-sm font-medium text-zinc-700">
               Your Photo
@@ -78,7 +78,7 @@ export default function Home() {
             </p>
           </div>
 
-          <InputFile.Root className="flex items-start gap-5">
+          <InputFile.Root className="items-start gap-5 lg:flex">
             <InputFile.ImagePreview />
             <InputFile.Trigger />
             <InputFile.Control />
@@ -86,7 +86,7 @@ export default function Home() {
           <div />
         </div>
 
-        <div className="grid grid-cols-form gap-3 pt-5">
+        <div className="grid gap-3 pt-5 lg:grid-cols-form">
           <label className="text-sm font-medium text-zinc-700">Role</label>
 
           <Input.Root>
@@ -94,7 +94,7 @@ export default function Home() {
           </Input.Root>
         </div>
 
-        <div className="grid grid-cols-form gap-3 pt-5">
+        <div className="grid gap-3 pt-5 lg:grid-cols-form">
           <label className="text-sm font-medium text-zinc-700">Country</label>
           <Select placeholder="Select a country">
             <SelectItem value="br" text="Brasil" />
@@ -103,7 +103,7 @@ export default function Home() {
           <div />
         </div>
 
-        <div className="grid grid-cols-form gap-3 pt-5">
+        <div className="grid gap-3 pt-5 lg:grid-cols-form">
           <label className="text-sm font-medium text-zinc-700">Timezone</label>
           <Select placeholder="Select a timezone">
             <SelectItem
@@ -115,68 +115,66 @@ export default function Home() {
           <div />
         </div>
 
-        <div className="grid grid-cols-form gap-3 pt-5">
+        <div className="grid gap-3 pt-5 lg:grid-cols-form">
           <div className="space-y-1">
             <span className="text-sm font-medium text-zinc-700">Bio</span>
             <p className="text-sm text-zinc-500">Write a short introduction.</p>
           </div>
 
-          <div className="space-y-3">
-            <div className="grid grid-cols-2 gap-3">
-              <Select placeholder="" defaultValue="normal">
-                <SelectItem value="normal" text="Normal text" defaultChecked />
-                <SelectItem value="md" text="Mark Down" defaultChecked />
-              </Select>
+          <div className="grid grid-cols-1 gap-3">
+            <Select placeholder="" defaultValue="normal">
+              <SelectItem value="normal" text="Normal text" defaultChecked />
+              <SelectItem value="md" text="Mark Down" defaultChecked />
+            </Select>
 
-              <div className="flex items-center gap-3">
-                <Button
-                  type="button"
-                  variant="ghost"
-                  className="rounded-md p-2 hover:bg-zinc-50"
-                >
-                  <Bold className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                </Button>
-                <Button
-                  type="button"
-                  variant="ghost"
-                  className="rounded-md p-2 hover:bg-zinc-50"
-                >
-                  <Italic className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                </Button>
-                <Button
-                  type="button"
-                  variant="ghost"
-                  className="rounded-md p-2 hover:bg-zinc-50"
-                >
-                  <Link className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                </Button>
-                <Button
-                  type="button"
-                  variant="ghost"
-                  className="rounded-md p-2 hover:bg-zinc-50"
-                >
-                  <List className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                </Button>
-                <Button
-                  type="button"
-                  variant="ghost"
-                  className="rounded-md p-2 hover:bg-zinc-50"
-                >
-                  <ListOrdered
-                    className="h-4 w-4 text-zinc-500"
-                    strokeWidth={3}
-                  />
-                </Button>
-              </div>
-
-              <TextArea />
+            <div className="flex items-center gap-3">
+              <Button
+                type="button"
+                variant="ghost"
+                className="rounded-md p-2 hover:bg-zinc-50"
+              >
+                <Bold className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+              </Button>
+              <Button
+                type="button"
+                variant="ghost"
+                className="rounded-md p-2 hover:bg-zinc-50"
+              >
+                <Italic className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+              </Button>
+              <Button
+                type="button"
+                variant="ghost"
+                className="rounded-md p-2 hover:bg-zinc-50"
+              >
+                <Link className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+              </Button>
+              <Button
+                type="button"
+                variant="ghost"
+                className="rounded-md p-2 hover:bg-zinc-50"
+              >
+                <List className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+              </Button>
+              <Button
+                type="button"
+                variant="ghost"
+                className="rounded-md p-2 hover:bg-zinc-50"
+              >
+                <ListOrdered
+                  className="h-4 w-4 text-zinc-500"
+                  strokeWidth={3}
+                />
+              </Button>
             </div>
+
+            <TextArea />
           </div>
 
           <div />
         </div>
 
-        <div className="grid grid-cols-form gap-3 pt-5">
+        <div className="grid gap-3 pt-5 lg:grid-cols-form">
           <div className="space-y-1">
             <span className="text-sm font-medium text-zinc-700">
               Portfolio projects
@@ -197,7 +195,7 @@ export default function Home() {
           <Button variant="secondary">Cancel</Button>
           <Button variant="primary">Save</Button>
         </div>
-      </form> */}
+      </form>
     </>
   )
 }
