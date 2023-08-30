@@ -28,7 +28,7 @@ export default function Home() {
         </div>
       </div>
 
-      <form
+      {/* <form
         id="formSubmit"
         className="mt-6 flex w-full flex-col space-y-5 divide-y divide-zinc-200"
       >
@@ -197,7 +197,7 @@ export default function Home() {
           <Button variant="secondary">Cancel</Button>
           <Button variant="primary">Save</Button>
         </div>
-      </form>
+      </form> */}
     </>
   )
 }
