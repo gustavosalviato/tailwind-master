@@ -16,8 +16,8 @@ export function ImagePreview() {
 
   if (previewURl === null) {
     return (
-      <div className="flex h-16 w-16 items-center justify-center rounded-full">
-        <User size={32} className="bg-violet-50 text-violet-600" />
+      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-violet-50 dark:bg-zinc-800">
+        <User className="h-8 w-8 text-violet-500 dark:text-violet-300" />
       </div>
     )
   }
@@ -27,7 +27,7 @@ export function ImagePreview() {
     <img
       src={previewURl}
       alt=""
-      className="flex h-16 w-16 items-center justify-center rounded-full"
+      className="h-16 w-16 rounded-full bg-violet-50 object-cover dark:bg-zinc-800"
     />
   )
 }

@@ -47,6 +47,7 @@ const config: Config = {
       },
     },
   },
+  darkMode: 'media',
   plugins: [require('tailwind-scrollbar')],
 }
 export default config

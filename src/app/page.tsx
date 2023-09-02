@@ -10,14 +10,18 @@ import { Button } from '@/components/Button'
 export default function Home() {
   return (
     <>
-      <h1 className="mb-6 text-3xl font-medium text-zinc-900">Settings</h1>
+      <h1 className="mb-6 text-3xl font-medium text-zinc-900 dark:text-zinc-100">
+        Settings
+      </h1>
 
       <SettingsTabs />
 
       <div className="mt-8 flex items-center justify-between border-b border-zinc-200 pb-5">
         <div className="space-y-1">
-          <h2 className="text-lg font-medium text-zinc-900">Personal Info</h2>
-          <p className="text-sm text-zinc-500">
+          <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">
+            Personal Info
+          </h2>
+          <p className="text-sm text-zinc-500 dark:text-zinc-400">
             Update your photo and personal details here.
           </p>
         </div>
@@ -35,7 +39,7 @@ export default function Home() {
         <div className="grid gap-3 lg:grid-cols-form">
           <label
             htmlFor="firstName"
-            className="text-sm font-medium text-zinc-700"
+            className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
           >
             Name
           </label>
@@ -52,7 +56,9 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 gap-3 pt-5 lg:grid-cols-form">
-          <label className="text-sm font-medium text-zinc-700">Email</label>
+          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+            Email
+          </label>
 
           <Input.Root>
             <Input.Prefix>
@@ -69,11 +75,11 @@ export default function Home() {
 
         <div className="grid gap-3 pt-5 lg:grid-cols-form">
           <div className="space-y-1">
-            <span className="text-sm font-medium text-zinc-700">
+            <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
               Your Photo
             </span>
 
-            <p className="text-sm text-zinc-500">
+            <p className="text-sm text-zinc-500 dark:text-zinc-400">
               This will be displayed on your profile.
             </p>
           </div>
@@ -87,7 +93,9 @@ export default function Home() {
         </div>
 
         <div className="grid gap-3 pt-5 lg:grid-cols-form">
-          <label className="text-sm font-medium text-zinc-700">Role</label>
+          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+            Role
+          </label>
 
           <Input.Root>
             <Input.Control placeholder="Role" defaultValue="Product Designer" />
@@ -95,7 +103,9 @@ export default function Home() {
         </div>
 
         <div className="grid gap-3 pt-5 lg:grid-cols-form">
-          <label className="text-sm font-medium text-zinc-700">Country</label>
+          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+            Country
+          </label>
           <Select placeholder="Select a country">
             <SelectItem value="br" text="Brasil" />
             <SelectItem value="us" text="United States" />
@@ -104,7 +114,9 @@ export default function Home() {
         </div>
 
         <div className="grid gap-3 pt-5 lg:grid-cols-form">
-          <label className="text-sm font-medium text-zinc-700">Timezone</label>
+          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+            Timezone
+          </label>
           <Select placeholder="Select a timezone">
             <SelectItem
               value="utc8"
@@ -117,7 +129,9 @@ export default function Home() {
 
         <div className="grid gap-3 pt-5 lg:grid-cols-form">
           <div className="space-y-1">
-            <span className="text-sm font-medium text-zinc-700">Bio</span>
+            <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+              Bio
+            </span>
             <p className="text-sm text-zinc-500">Write a short introduction.</p>
           </div>
 
@@ -176,7 +190,7 @@ export default function Home() {
 
         <div className="grid gap-3 pt-5 lg:grid-cols-form">
           <div className="space-y-1">
-            <span className="text-sm font-medium text-zinc-700">
+            <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
               Portfolio projects
             </span>
             <p className="text-sm text-zinc-500">

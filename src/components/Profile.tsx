@@ -12,8 +12,10 @@ export function Profile() {
         className="h-10 w-10 rounded-full object-cover"
       />
       <div className="flex flex-col gap-0.5 truncate">
-        <span className="text-sm font-semibold text-zinc-700">Gustavo</span>
-        <span className="truncate text-sm text-zinc-500">
+        <span className="text-sm font-semibold text-zinc-700 dark:text-zinc-100">
+          Gustavo
+        </span>
+        <span className="truncate text-sm text-zinc-500 dark:text-zinc-400">
           gustavosalviato@gmail.com
         </span>
       </div>

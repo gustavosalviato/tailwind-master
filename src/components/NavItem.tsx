@@ -9,11 +9,13 @@ export function NavItem({ title, icon: Icon }: NavItemProps) {
   return (
     <a
       href="/"
-      className="group flex items-center gap-3 rounded px-3 py-2 transition-colors duration-300 hover:bg-violet-50 hover:text-violet-500 "
+      className="group flex items-center gap-3 rounded px-3 py-2 transition-colors duration-300 hover:bg-violet-50 hover:text-violet-500 dark:hover:bg-zinc-800"
     >
       <Icon size={20} className="text-zinc-500" />
-      {title}
-      <ChevronDown className="ml-auto group-hover:text-violet-400" />
+      <span className="font-medium text-zinc-700 group-hover:text-violet-500 dark:text-zinc-100 dark:group-hover:text-violet-300">
+        {title}
+      </span>
+      <ChevronDown className="ml-auto text-zinc-900 group-hover:text-violet-400 dark:text-zinc-400" />
     </a>
   )
 }

@@ -12,7 +12,7 @@ import { Button } from '../Button'
 
 export function Sidebar() {
   return (
-    <Collapsible.Root className="fixed left-0 right-0 top-0 z-20 flex flex-col gap-6 overflow-hidden overflow-y-auto border-b border-zinc-200 bg-white p-4 scrollbar-thin scrollbar-track-zinc-950 scrollbar-thumb-zinc-800 data-[state=open]:bottom-0 lg:right-auto lg:h-auto lg:w-80 lg:overflow-auto lg:border-b-0 lg:border-r lg:border-zinc-200 lg:px-5 lg:py-8">
+    <Collapsible.Root className="fixed left-0 right-0 top-0 z-20 flex flex-col gap-6 overflow-hidden overflow-y-auto border-b border-zinc-200 bg-white p-4 scrollbar-thin scrollbar-track-zinc-950 scrollbar-thumb-zinc-800 data-[state=open]:bottom-0 dark:border-zinc-900 dark:bg-zinc-800 lg:right-auto lg:h-auto lg:w-80 lg:overflow-auto lg:border-b-0 lg:border-r lg:border-zinc-200 lg:px-5 lg:py-8">
       <div className="flex items-center justify-between">
         <Logo />
 
@@ -48,7 +48,7 @@ export function Sidebar() {
 
           <WidgetUsedSpace />
 
-          <div className="h-px w-full bg-zinc-200" />
+          <div className="h-px w-full bg-zinc-200 dark:bg-zinc-700" />
 
           <Profile />
         </div>

@@ -13,13 +13,14 @@ const fileItem = tv({
   variants: {
     state: {
       progress: {
-        container: '',
-        icon: 'border-violet-50 bg-violet-100',
+        container: 'dark:bg-zinc-800 dark:border-zinc-700',
+        icon: 'border-violet-50 bg-violet-100 dark:bg-zinc-800 dark:border-transparent',
         deleteButton: 'text-zinc-500',
       },
       error: {
-        container: 'bg-error-25 border-error-300',
-        icon: 'border-error-50 bg-error-100 text-error-600',
+        container:
+          'bg-error-25 border-error-300 dark:bg-zinc-800 dark:text-error-800',
+        icon: 'border-error-50 bg-error-100 text-error-600 dark:bg-error-400 dark:border-transparent',
         deleteButton: 'text-error-500',
       },
       complete: {
@@ -49,27 +50,33 @@ export function FileItem({ name, size, state }: FileItemProps) {
 
       {state === 'error' ? (
         <div className="flex flex-1 flex-col space-y-1">
-          <span className="text-error-800 text-sm font-medium">
+          <span className="text-sm font-medium text-error-800 dark:text-error-300">
             Upload failed, please try again.
           </span>
-          <span className="text-error-400 text-sm">{name}</span>
+          <span className="text-sm text-error-200">{name}</span>
 
-          <button className="text-error-800 w-fit text-sm">Try again</button>
+          <button className="w-fit text-sm dark:text-error-300">
+            Try again
+          </button>
         </div>
       ) : (
         <div className="flex flex-1 flex-col">
-          <span className="text-sm font-medium text-zinc-700">{name}</span>
-          <span className="text-sm text-zinc-500">{formatBytes(size)}</span>
+          <span className="text-sm font-medium text-zinc-700 dark:text-zinc-100">
+            {name}
+          </span>
+          <span className="text-sm text-zinc-500 dark:text-zinc-400">
+            {formatBytes(size)}
+          </span>
 
           <div className="mt-3">
             <div className="flex items-center">
-              <div className="w-full bg-zinc-100">
+              <div className="w-full rounded-full bg-zinc-100 dark:bg-zinc-600">
                 <div
                   className="h-2 w-4/5 rounded-full bg-violet-600"
                   style={{ width: state === 'complete' ? '100%' : '80%' }}
                 />
               </div>
-              <p className="ml-2 text-sm font-medium text-zinc-700">
+              <p className="ml-2 text-sm font-medium text-zinc-700 dark:text-zinc-400">
                 {state === 'complete' ? '100%' : '80%'}
               </p>
             </div>
